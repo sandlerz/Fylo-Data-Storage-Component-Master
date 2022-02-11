@@ -31,6 +31,7 @@ The designs were created to the following widths:
 - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
 - Weights: 400, 700 */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+/*Gobal*/
 *{
     padding: 0;
     margin: 0;
@@ -40,20 +41,30 @@ html{
     font-size: 62.5%;
 }
 body{
-    background-image: url(../images/bg-desktop.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: hsl(229, 57%, 11%);
 }
 main{
     color: white;
     font-family: 'Raleway', sans-serif;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+.bg{
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    width: 100vw;
+    z-index: -100;
+}
+/*Fisrt Container*/
 .first_container{
     height: 200px;
-    width: 350px;
+    min-width: 350px;
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
     border-top-right-radius: 100px;
@@ -71,9 +82,79 @@ main{
     background-color: hsl(229, 57%, 11%);
     object-fit: none;
 }
+
+/*Mini container*/
+.mini_container{
+    width: 180px;
+    height: 75px;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    position: relative;
+    left: 330px;
+    top: 13px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gigas{
+    font-size: 4rem;
+    margin-right: 8px;
+}
+.gb_left{
+    color: hsl(229, 7%, 55%);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+/*Second Container*/
 .second_container{
     width: 550px;
+    height: 150px;
+    align-self: flex-end;
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
-    padding: 40px 35px;
+    padding: 40px 40px;
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 12.5px;
+}
+
+/*Bar*/
+.bar_container{
+    height: 20px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    padding-left: 3px;
+    margin: 20px 0 10px;
+    display: flex;
+}
+.bar_load{
+    width: 340px;
+    height: 14px;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    padding-right: 2px;
+    align-self: center;
+    display: flex;
+    justify-content: end;
+}
+.bar_point{
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    align-self: center;
+}
+/*End bard*/
+
+.storage{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+.storage p span{
+    font-size: 1.65rem;
 }
