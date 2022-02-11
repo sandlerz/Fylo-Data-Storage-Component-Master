@@ -35,6 +35,11 @@ main{
     width: 100vw;
     z-index: -100;
 }
+@media (max-width: 59.375em){
+    .bg{
+        min-height: 100vh;
+    }
+}
 /*Fisrt Container*/
 .first_container{
     height: 200px;
